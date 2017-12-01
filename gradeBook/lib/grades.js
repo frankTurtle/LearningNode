@@ -19,6 +19,17 @@ var gradeBook = {
         return sum / this.getCountOfGrades();
     },
 
+    getLetterGrade: function(){
+        var average = this.getAverage();
+
+        if ( average >= 90 ) return 'A';
+        if ( average >= 80 && average < 89 ) return 'B';
+        if ( average >= 70 && average < 79 ) return 'C';
+        if ( average >= 60 && average < 69 ) return 'D';
+        
+        return 'F';
+    },
+
     reset: function(){
         this._grades = [];
     }
