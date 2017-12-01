@@ -1,7 +1,6 @@
 var book = require("./lib/grades").book;
+var express = require("express");
+var app = express();
 
-for( var i = 2; i < process.argv.length; i += 1){
-    book.addGrade( parseInt(process.argv[i]) );
-}
-
-console.log( book.getAverage() );
+app.listen( 3000 );
+console.log( "server ready ..." );
