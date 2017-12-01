@@ -3,7 +3,7 @@ var book = require("../lib/grades").book;
 // For resetting the book to a blank slate each time a test is run
 exports["setUp"] = function( callback ){
     book.reset();
-
+ 
     callback();
 }
 
